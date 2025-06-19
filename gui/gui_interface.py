@@ -147,7 +147,7 @@ with gradio.Blocks() as block:
             return add_grade(split_id(student_label), split_id(subject_label), grade, gtype, semester)
 
 
-        subject_btn.click(fn=add_subject, inputs=[subject_name], outputs=[subject_out, subject_dropdown])
+        subject_btn.click(fn=add_subject, inputs=[subject_name], outputs=[subject_out, subject_dropdown, subject_dropdown_grade])
         grade_add_btn.click(fn=admin_add_grade_interface, inputs=[student_dropdown_grade, subject_dropdown, grade_in, grade_type, grade_semester], outputs=[grade_admin_out])
 
     login_button.click(fn=login, inputs=[login_input, password_input], outputs=[status, student_id, student_name, student_panel, admin_panel, login_panel])

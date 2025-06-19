@@ -6,7 +6,7 @@ def init_db():
         Student_Id INTEGER PRIMARY KEY AUTOINCREMENT,
         FirstName TEXT NOT NULL,
         LastName TEXT NOT NULL,
-        Login TEXT NOT NULL,
+        Login TEXT NOT NULL UNIQUE,
         PasswordHash TEXT NOT NULL
     )
     ''')

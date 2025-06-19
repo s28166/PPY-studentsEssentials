@@ -16,6 +16,6 @@ def login_user(login, password):
 
 def password_change(login, old_password, new_password):
     database.cursor.execute('''
-        UPDATE Student SET PasswordHash = ? WHERE Login = ? AND Password = ?
+        UPDATE Student SET PasswordHash = ? WHERE Login = ? AND PasswordHash = ?
     ''', (new_password, login, old_password))
     return "Password changed successfully"
